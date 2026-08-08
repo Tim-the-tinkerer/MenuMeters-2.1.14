@@ -1,0 +1,37 @@
+# Build products
+build/
+Build/
+DerivedData/
+*.app
+*.appex
+*.dSYM/
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+UserInterfaceState.xcuserstate
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / temp
+*~
+*~.nib
+*~.xib
+*.swp
+.idea/
+
+# Notarization / packaging scratch (legacy scripts)
+notarized_product/
+misc/
+notarize
+prenotarized_zip/
+staple-and-upload
+upload
+upload-old
