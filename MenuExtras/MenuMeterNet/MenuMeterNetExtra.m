@@ -5,6 +5,10 @@
 //
 //	Copyright (c) 2002-2014 Alex Harper
 //
+//	Changed 2026-10-14 by Alexander Botev: starts when pppconfd is missing,
+//	as on macOS 27.2.
+//	Backported from yujitach/MenuMeters 2.1.7 on 2026-10-29.
+//
 // 	This file is part of MenuMeters.
 //
 // 	MenuMeters is free software; you can redistribute it and/or modify
@@ -151,7 +155,7 @@
 	pppControl = [MenuMeterNetPPP sharedPPP];
 	netHistoryData = [NSMutableArray array];
 	netHistoryIntervals = [NSMutableArray array];
-	if (!(netConfig && netStats && pppControl && netHistoryData)) {
+	if (!(netConfig && netStats && netHistoryData)) {
 		NSLog(@"MenuMeterNet unable to load data gatherers/controllers. Abort.");
 		return nil;
 	}
